@@ -20,8 +20,8 @@ import com.udacity.vehicles.client.prices.PriceClient;
 public class CarService {
 
     private final CarRepository repository;
-    private final MapsClient mapsClient;
-    private final PriceClient priceClient;
+    private PriceClient priceClient;
+    private MapsClient mapsClient;
 
     public CarService(CarRepository repository) {
         /**
@@ -29,8 +29,8 @@ public class CarService {
          *   in `VehiclesApiApplication` as arguments and set them here.
          */
         this.repository = repository;
-        this.mapsClient = mapsClient;
         this.priceClient = priceClient;
+        this.mapsClient = mapsClient;
     }
 
     /**

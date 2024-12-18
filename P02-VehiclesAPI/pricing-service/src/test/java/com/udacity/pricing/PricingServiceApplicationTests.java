@@ -33,7 +33,7 @@ public class PricingServiceApplicationTests {
 	@Test
 	public void getAllPrices() {
 		ResponseEntity<List> response = 
-			this.restTemplate.getForEntity("http://localhost:" + port + "/price", List.class);
+			this.restTemplate.getForEntity("http://localhost:" + port + "/price/", List.class);
 			assertThat(response.getStatusCode(), equalTo(HttpStatus.OK));
 	}
 
