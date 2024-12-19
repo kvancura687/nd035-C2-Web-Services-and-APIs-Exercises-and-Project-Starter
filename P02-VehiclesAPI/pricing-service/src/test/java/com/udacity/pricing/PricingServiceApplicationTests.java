@@ -1,7 +1,5 @@
 package com.udacity.pricing;
 
-import java.util.List;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.Test;
@@ -14,6 +12,8 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import com.udacity.pricing.domain.price.Price;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment=SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -31,9 +31,9 @@ public class PricingServiceApplicationTests {
 	private TestRestTemplate restTemplate;
 
 	@Test
-	public void getAllPrices() {
-		ResponseEntity<List> response = 
-			this.restTemplate.getForEntity("http://localhost:" + port + "/price/", List.class);
+	public void getVehiclePrice() {
+		ResponseEntity<Price> response = 
+			this.restTemplate.getForEntity("http://localhost:" + port + "/services/price?vehicleId=1", Price.class);
 			assertThat(response.getStatusCode(), equalTo(HttpStatus.OK));
 	}
 

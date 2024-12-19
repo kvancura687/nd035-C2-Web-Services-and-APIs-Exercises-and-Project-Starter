@@ -14,3 +14,6 @@ should be running at once for full operation. Further instructions are available
 ## Dependencies
 
 The project requires the use of Maven and Spring Boot, along with Java v11.
+
+## RESOURCES USED
+- Pulled snippets of code from the labs throughout the course and updated to fit the VehiclesAPI project as needed
