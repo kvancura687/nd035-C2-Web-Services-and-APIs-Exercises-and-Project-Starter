@@ -15,8 +15,8 @@ import com.udacity.vehicles.domain.manufacturer.ManufacturerRepository;
 /**
  * Launches a Spring Boot application for the Vehicles API,
  * initializes the car manufacturers in the database,
- * and launches web clients to communicate with m
- * aps and pricing.
+ * and launches web clients to communicate with
+ * maps and pricing.
  */
 @SpringBootApplication
 @EnableJpaAuditing
